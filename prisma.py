@@ -15,7 +15,7 @@ def prisma(width, height, url, file):
     driver.get(url)
 
     scroll_w = driver.execute_script("return window.document.body.scrollWidth;")
-    scroll_h = driver.execute_script("return window.document.body.scrollHeight;")
+    scroll_h = driver.execute_script("return window.innerHeight;")
 
     width_diff = width - scroll_w
     height_diff = height - scroll_h
